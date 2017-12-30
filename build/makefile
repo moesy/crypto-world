@@ -22,7 +22,7 @@ nvidia-rig: install logstash
   sudo apt-get install -y mesa-common-dev
   sudo apt-get install -y cuda-libraries-9-1
 
-ethminer:
+mine-ether:
   rm -rf ~/sandbox/miners/ethminer
   git clone https://github.com/ethereum-mining/ethminer.git ~/sandbox/miners/ethminer
   mkdir -p ~/sandbox/miners/ethminer/build
