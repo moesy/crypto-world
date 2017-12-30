@@ -6,14 +6,14 @@ LOG_PATH+=`date "+%Y-%m-%d-%H-%M-%S"`.log
 mkdir -p $LOG_PATH
 
 mine-trezarcoin:
-  LOG_PATH=trezarcoin/$LOG_PATH
+  LOG_PATH=logs/trezarcoin/$LOG_PATH
   echo "coming soon"
   
 mine-hush:
-  LOG_PATH=hush/$LOG_PATH
+  LOG_PATH=logs/hush/$LOG_PATH
   echo "coming soon"
   
 mine-ethereum:
-  LOG_PATH=ethereum/$LOG_PATH
+  LOG_PATH=logs/ethereum/$LOG_PATH
   
   ethminer --farm-recheck 200 -G -S us2.ethpool.org:3333 -FS us1.ethpool.org:3333 -O $WALLET_ETHER.$RIG_NAME > $LOG_PATH
