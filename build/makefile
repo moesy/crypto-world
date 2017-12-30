@@ -21,6 +21,7 @@ nvidia-rig: install logstash
   sudo apt-get install -y cuda-command-line-tools-9-1
   sudo apt-get install -y mesa-common-dev
   sudo apt-get install -y cuda-libraries-9-1
+  rm -rf cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
 
 mine-ether:
   rm -rf ~/sandbox/miners/ethminer
