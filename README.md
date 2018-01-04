@@ -8,16 +8,18 @@ Standardize common cryptocurrency related tasks
 - Ethereum
 - Hush (coming soon)
 
-# build commands (run from the build directory)
-- rig-nvidia
+# build commands
+##### run from the build/ directory
+- make rig-nvidia
 
-# Mining Commands (run from the mine/ directory)
+# Mining Commands
+##### run from the mine/ directory
 - mike mine-ethereum
 - make mine-hush
 
 
 
-# UBuntu Install
+# Ubuntu Install
 ```
 sudo apt-get install git -y
 mkdir -p /opt
