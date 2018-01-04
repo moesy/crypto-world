@@ -11,9 +11,9 @@ Standardize common cryptocurrency related tasks
 # build commands (run from the build directory)
 - nvidia-rig
 
-# Mining Commands (run from the mine directory)
-- eth-miner
-- hush-miner (coming soon)
+# Mining Commands (run from the mine/ directory)
+- mike mine-ethereum
+- make mine-hush
 
 
 
