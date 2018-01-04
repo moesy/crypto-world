@@ -9,7 +9,7 @@ Standardize common cryptocurrency related tasks
 - Hush (coming soon)
 
 # build commands (run from the build directory)
-- nvidia-rig
+- rig-nvidia
 
 # Mining Commands (run from the mine/ directory)
 - mike mine-ethereum
