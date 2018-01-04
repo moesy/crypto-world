@@ -16,8 +16,6 @@ wget https://github.com/poolgold/ewbf-miner-btg-edition/releases/download/v0.3.4
 - move BTG-nVidia.miner.0.3.4b.Linux.Bin.zip to /opt/crypto-world/miners/ewbf/
 - replace build/makefile with build/makefile_slow 
 
-Modify the build sccripts 
-
 # supported O.S
 - Ubuntu 16.x
 
