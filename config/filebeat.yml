@@ -1,0 +1,42 @@
+filebeat.prospectors:
+
+- type: log
+  enabled: true
+  paths:
+    - /opt/crypto-world/logs/hush/*_ewbf.log
+  fields:
+      coin: hush
+      miner: ewbf
+
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: false
+
+  # Period on which files under path should be checked for changes
+  #reload.period: 10s
+
+setup.template.settings:
+  index.number_of_shards: 3
+  #index.codec: best_compression
+  #_source.enabled: false
+
+name: hush-ewbf
+tags: ["hush", "ewbf"]
+
+fields:
+  env: dev
+  rig: angelica
+
+
+output.logstash:
+  hosts: ["localhost:5044"]
+  #ssl.certificate_authorities: ["/etc/pki/root/ca.pem"]
+  #ssl.certificate: "/etc/pki/client/cert.pem"
+  #ssl.key: "/etc/pki/client/cert.key"
+
+# Available log levels are: critical, error, warning, info, debug
+logging.level: debug
+
+# To enable all selectors use ["*"]. Examples of other selectors are "beat",
+# "publish", "service".
+#logging.selectors: ["*"]
