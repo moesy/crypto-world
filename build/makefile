@@ -1,4 +1,4 @@
-core:
+install-core:
 	sudo apt-get install linux-headers-$(uname -r)
 	sudo apt-get install -y tmux
 	sudo apt-get install -y git
@@ -7,7 +7,7 @@ core:
 	sudo apt-get install -y libcurl4-openssl-dev libssl-dev libjansson-dev automake autotools-dev build-essential
 	sudo apt-get install -y libffi-dev python-dev
 
-logstash: 
+install-logstash: 
 	wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 	sudo apt-get install apt-transport-https
 	echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
@@ -20,11 +20,11 @@ install-filebeat:
 	wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.1.1-amd64.deb
 	sudo dpkg -i filebeat-6.1.1-amd64.deb
 	rm -rf filebeat-6.1.1-amd64.deb
-	echo "Don't forget filebeat.yml"
+	sudo cp /opt/crypto-world/config/filebeat.yml /etc/filebeat/filebeat.yml
 	# sudo service filebeat start
 		
 
-rig-nvidia: core logstash install-filebeat
+rig-nvidia: install-core install-logstash install-filebeat
 	wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
 	sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
 	sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
