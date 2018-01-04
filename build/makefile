@@ -12,8 +12,19 @@ logstash:
 	sudo apt-get install apt-transport-https
 	echo "deb https://artifacts.elastic.co/packages/6.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-6.x.list
 	sudo apt-get update && sudo apt-get install logstash
+	sudo chown -R logstash.logstash /usr/share/logstash
+	sudo chmod 777 /usr/share/logstash/data
+	echo "Don't forget logstash.yml"
 
-rig-nvidia: core logstash
+install-filebeat:
+	wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.1.1-amd64.deb
+	sudo dpkg -i filebeat-6.1.1-amd64.deb
+	rm -rf filebeat-6.1.1-amd64.deb
+	echo "Don't forget filebeat.yml"
+	# sudo service filebeat start
+		
+
+rig-nvidia: core logstash install-filebeat
 	wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
 	sudo dpkg -i cuda-repo-ubuntu1604_9.1.85-1_amd64.deb
 	sudo apt-key adv --fetch-keys http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub
