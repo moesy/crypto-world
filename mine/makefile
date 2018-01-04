@@ -1,19 +1,18 @@
-RIG_NAME=angelica
-WALLET_ETHER=3c37055711e05f2dce2e8407bf35a99126c6a794
+#!/bin/sh
 
-LOG_PATH=`date "+%Y%m/%d/"`
-LOG_PATH+=`date "+%Y-%m-%d-%H-%M-%S"`.log
-mkdir -p $LOG_PATH
+export RIG_NAME=angelica
+export WALLET_ETHER=3c37055711e05f2dce2e8407bf35a99126c6a794
+export WALLET_HUSH=t1VQ8PCt6YPq9qeJXDqFUKQdNTKK8DfgLCU
+
+LOG_PATH=/opt/cyprto-world/logs/
+LOG_FILE=`date "+%Y-%m-%d-%H-%M-%S"`.log
 
 mine-trezarcoin:
-  LOG_PATH=logs/trezarcoin/$LOG_PATH
-  echo "coming soon"
+	LOG_PATH=logs/trezarcoin/$LOG_PATH
   
 mine-hush:
-  LOG_PATH=logs/hush/$LOG_PATH
-  echo "coming soon"
+	mkdir -p ${LOG_PATH}hush/
+	/opt/crypto-world/bin/miner --server us.hushmine.pro --user ${WALLET_HUSH}.${RIG_NAME} --pass x --port 9009 --log 2 --logfile=${LOG_PATH}hush/hush_${RIG_NAME}_ewbf.log
   
 mine-ethereum:
-  LOG_PATH=logs/ethereum/$LOG_PATH
-  
-  ethminer --farm-recheck 200 -G -S us2.ethpool.org:3333 -FS us1.ethpool.org:3333 -O $WALLET_ETHER.$RIG_NAME > $LOG_PATH
+	ethminer --farm-recheck 200 -G -S us2.ethpool.org:3333 -FS us1.ethpool.org:3333 -O $${WALLET_HUSH}.${RIG_NAME}
