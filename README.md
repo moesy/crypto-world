@@ -14,7 +14,7 @@ wget https://github.com/poolgold/ewbf-miner-btg-edition/releases/download/v0.3.4
 - move filebeat-6.1.1-amd64.deb to /opt/crypt-world/build/
 - move cuda-repo-ubuntu1604_9.1.85-1_amd64.debto /opt/crypt-world/build/
 - move BTG-nVidia.miner.0.3.4b.Linux.Bin.zip to /opt/crypto-world/miners/ewbf/
-- edit build/makefile (comment out wget and rm -rf lines)
+- replace build/makefile with build/makefile_slow 
 
 Modify the build sccripts 
 
