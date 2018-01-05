@@ -21,7 +21,7 @@ wget https://github.com/poolgold/ewbf-miner-btg-edition/releases/download/v0.3.4
 
 # supported coins
 - Ethereum
-- Hush (coming soon)
+- Hush
 
 # build commands
 ##### run from the build/ directory
