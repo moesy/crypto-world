@@ -3,7 +3,7 @@ filebeat.prospectors:
 - type: log
   enabled: true
   paths:
-    - /opt/crypto-world/tezarcoin/hush/*_ewbf.log
+    - /opt/crypto-world/logs/hush/*_ewbf.log
   fields:
       coin: hush
       miner: ewbf    
@@ -11,7 +11,7 @@ filebeat.prospectors:
 - type: log
   enabled: true
   paths:
-    - /opt/crypto-world/logs/hush/*_ccminer.log
+    - /opt/crypto-world/logs/tezarcoin/*_ccminer.log
   fields:
       coin: tezarcoin
       miner: ccminer
