@@ -21,7 +21,7 @@ install-filebeat:
 	sudo dpkg -i filebeat-6.1.1-amd64.deb
 	rm -rf filebeat-6.1.1-amd64.deb
 	sudo cp /opt/crypto-world/config/filebeat.yml /etc/filebeat/filebeat.yml
-	# sudo service filebeat start
+	sudo service filebeat start
 		
 
 rig-nvidia: install-core install-logstash install-filebeat
@@ -71,4 +71,5 @@ miner-ccminer:
 	cd /opt/crypto-world/miners/ccminer; ./autogen.sh
 	cd /opt/crypto-world/miners/ccminer; ./configure --with-cuda
 	cd /opt/crypto-world/miners/ccminer; ./build.sh
+	mv /opt/crypto-world/miners/ccminer/ccminer /opt/crypto-world/bin/ccminer
 
