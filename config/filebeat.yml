@@ -11,7 +11,7 @@ filebeat.prospectors:
 - type: log
   enabled: true
   paths:
-    - /opt/crypto-world/logs/tezarcoin/*_ccminer.log
+    - /opt/crypto-world/logs/trezarcoin/*_ccminer.log
   fields:
       coin: tezarcoin
       miner: ccminer
