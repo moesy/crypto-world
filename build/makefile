@@ -62,17 +62,13 @@ miner-nheqminer:
 	cd /opt/crypto-world/miners/nheqminer; make build
 	cd /opt/crypto-world/miners/nheqminer/build; cmake ../nheqminer
 	cd /opt/crypto-world/miners/nheqminer; make -j $(nproc)
+	
 
-# needs testing
 miner-ccminer:
 	mkdir -p /opt/crypto-world/miners/bin
 	rm -rf /opt/crypto-world/miners/ccminer
-	git clone https://github.com/tpruvot/ccminer.git /opt/crypto-world/miners/ccminer
+	git clone -b linux https://github.com/tpruvot/ccminer.git /opt/crypto-world/miners/ccminer
 	cd /opt/crypto-world/miners/ccminer; ./autogen.sh
 	cd /opt/crypto-world/miners/ccminer; ./configure --with-cuda
-	
-	# windows
-	#wget https://github.com/tpruvot/ccminer/releases/download/2.2.3-tpruvot/ccminer-x64-2.2.3-cuda9.7z --directory-prefix=/opt/crypto-world/miners/bin
-	#cd /opt/crypto-world/miners/bin; 7z x ccminer-x64-2.2.3-cuda9.7z
-	#cd cd /opt/crypto-world/miners/bin; rm -rf ccminer-x64-2.2.3-cuda9.7z
+	cd /opt/crypto-world/miners/ccminer; ./build.sh
 
