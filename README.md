@@ -32,6 +32,13 @@ wget https://github.com/poolgold/ewbf-miner-btg-edition/releases/download/v0.3.4
 - mike mine-ethereum
 - make mine-hush
 
+# LOgstash
+```
+cd /usr/share/logstash
+sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
+ sudo  service filebeat start
+
+```
 
 
 # Ubuntu Install
