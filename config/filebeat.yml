@@ -13,7 +13,7 @@ filebeat.prospectors:
   paths:
     - /opt/crypto-world/logs/trezarcoin/*_ccminer.log
   fields:
-      coin: tezarcoin
+      coin: trezarcoin
       miner: ccminer
 
 filebeat.config.modules:
@@ -25,7 +25,7 @@ setup.template.settings:
   index.number_of_shards: 3
   
 name: crypto-world-logger
-tags: ["cryptoo-world"]
+tags: ["crypto-world"]
 
 fields:
   env: dev
