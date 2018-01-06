@@ -9,20 +9,25 @@ Standardize common cryptocurrency related tasks
 - Hush
 - Trezarcoin
 
+
+# supported miners
+- ccminer
+- ethminer
+- ewbf
+- nheqminer
+
 # build commands
 ##### run from the build/ directory
 - make rig-nvidia
 
 # Mining Commands
 ##### run from the mine/ directory
-- mike mine-ethereum
-- make mine-hush
+- make mine-{coin} i.e (make mine-hush)
 
 # Logstash (optional)
 ```
 sudo  service filebeat start
-cd /usr/share/logstash
-sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
+cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
 ```
 
 
