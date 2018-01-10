@@ -14,7 +14,7 @@ install-logstash:
 	sudo apt-get update && sudo apt-get install logstash
 	sudo chown -R logstash.logstash /usr/share/logstash
 	sudo chmod 777 /usr/share/logstash/data
-	echo "Don't forget logstash.yml"
+	sudo cp /opt/crypto-world/config/crypto-world-mines.conf /usr/share/logstash/crypto-world-mines.conf
 
 install-filebeat:
 	wget https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-6.1.1-amd64.deb
