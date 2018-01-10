@@ -24,9 +24,8 @@ Standardize common cryptocurrency related tasks
 ##### run from the mine/ directory
 - make mine-{coin} i.e (make mine-hush)
 
-# Logstash (optional)
+# Start logging engine
 ```
-sudo  service filebeat start
 cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
 ```
 
