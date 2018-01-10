@@ -16,18 +16,15 @@ Standardize common cryptocurrency related tasks
 - ewbf
 - nheqminer
 
-# build commands
-##### run from the build/ directory
-- make rig-nvidia
-
-# Mining Commands
-##### run from the mine/ directory
-- make mine-{coin} i.e (make mine-hush)
-
-# Start logging engine
+# Ubuntu Install
 ```
-cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
+sudo apt-get install git -y
+mkdir -p /opt
+sudo chown -R $USER:$USER /opt/
+git clone https://github.com/mokio8/crypto-world.git /opt/crypto-world
+cd /opt/crypto-world/build
 ```
+
 
 # Configuration
 * config/crypto-world-mines.conf
@@ -39,12 +36,16 @@ cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.set
 * mine/makefile
   * change wallet credentials in makefile
   
+# build commands
+##### run from the build/ directory
+- make rig-nvidia
+  
+# Mining Commands
+##### run from the mine/ directory
+- make mine-{coin} i.e (make mine-hush)
 
-# Ubuntu Install
+# Start logging engine
 ```
-sudo apt-get install git -y
-mkdir -p /opt
-sudo chown -R $USER:$USER /opt/
-git clone https://github.com/mokio8/crypto-world.git /opt/crypto-world
-cd /opt/crypto-world/build
+cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
 ```
+  
