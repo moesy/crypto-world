@@ -1,10 +1,10 @@
 #!/bin/sh
 
-export RIG_NAME=angelica
+export RIG_NAME=cryptoworld
 export WALLET_ETHER=3c37055711e05f2dce2e8407bf35a99126c6a794
 export WALLET_HUSH=t1VQ8PCt6YPq9qeJXDqFUKQdNTKK8DfgLCU
 export WALLET_TREZAR=
-export WALLET_TREZAR_PASS=nonya
+export WALLET_TREZAR_PASS=
 
 LOG_PATH=/opt/crypto-world/logs/
 LOG_FILE=`date "+%Y-%m-%d-%H-%M-%S"`.log
