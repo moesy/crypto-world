@@ -30,14 +30,14 @@ sudo  service filebeat start
 cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.settings /etc/logstash/ --config.reload.automatic
 ```
 
-# Configuration (config/)
-* crypto-world-mines.conf
+# Configuration
+* config/crypto-world-mines.conf
   * change output.elasticsearch.host to the explorer url
   
-* filebeat.yml
+* config/filebeat.yml
   * change fields.rig to this rigsname (use unique and meaningful names) 
   
-* mine/
+* mine/makefile
   * change wallet credentials in makefile
   
 
