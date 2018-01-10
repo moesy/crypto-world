@@ -40,7 +40,11 @@ cd /opt/crypto-world/build
 ##### run from the build/ directory
 - make rig-nvidia
   
-# Mining Commands
+# Install miners
+- install the miners from the build/ directory
+ - make miner-{miner} i.e make miner-ewbf
+ 
+# Start Mining
 ##### run from the mine/ directory
 - make mine-{coin} i.e (make mine-hush)
 
