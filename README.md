@@ -31,11 +31,14 @@ cd /usr/share/logstash; sudo bin/logstash -f crypto-world-mines.conf  --path.set
 ```
 
 # Configuration (config/)
-- update the rig name by changing fields.rig in filebeat.yml
-- crypto-world-mines.conf:
--- change output.elasticsearch.host to the explorer url
-- filebeat.yml
--- change fields.rig to this rigsname (use unique and meaningful names) 
+* crypto-world-mines.conf
+  * change output.elasticsearch.host to the explorer url
+  
+* filebeat.yml
+  * change fields.rig to this rigsname (use unique and meaningful names) 
+  
+* mine/
+  * change wallet credentials in makefile
   
 
 # Ubuntu Install
