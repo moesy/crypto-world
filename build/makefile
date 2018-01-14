@@ -41,7 +41,7 @@ miner-ewbf:
 	rm -rf /opt/crypto-world/miners/ewbf
 	mkdir -p /opt/crypto-world/miners/ewbf
 	wget --directory-prefix=/opt/crypto-world/miners/ewbf https://github.com/poolgold/ewbf-miner-btg-edition/releases/download/v0.3.4b-BTG/BTG-nVidia.miner.0.3.4b.Linux.Bin.zip
-	unzip BTG-nVidia.miner.0.3.4b.Linux.Bin.zip -d /opt/crypto-world/miners/ewbf
+	unzip /opt/crypto-world/miners/ewbf/BTG-nVidia.miner.0.3.4b.Linux.Bin.zip -d /opt/crypto-world/miners/ewbf
 	mv /opt/crypto-world/miners/ewbf/BTG-nVidia.miner.0.3.4b.Linux.Bin/* /opt/crypto-world/miners/ewbf
 	rm -rf /opt/crypto-world/miners/ewbf/BTG-nVidia.miner.0.3.4b.Linux.Bin/
 	mv /opt/crypto-world/miners/ewbf/miner /opt/crypto-world/bin/miner
